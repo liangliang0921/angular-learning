@@ -1,0 +1,38 @@
+<p>
+    ------------------我是页面1-----------------------------
+    ------------------我是页面1-----------------------------
+    ------------------我是页面1-----------------------------
+<div>
+    <button nz-button [nzType]="primary" (click)="test2('message')">请点击</button>
+</div>
+<div>{{dic}}</div>
+
+<div style="height: 40px;">
+    <button nz-button nz-dropdown [nzDropdownMenu]="menu">
+      {{buttonName}}
+      <i nz-icon nzType="down"></i>
+    </button>
+</div>
+<nz-dropdown-menu #menu="nzDropdownMenu">
+    <ul nz-menu>
+      <li nz-menu-item >我的记录</li>
+      <li nz-menu-item >全部记录</li>
+      <li nz-menu-item *ngFor="let data of tem">{{data}}</li>
+    </ul>
+</nz-dropdown-menu>
+<div>
+    <label nz-checkbox [(ngModel)]="checked" (ngModelChange)="log($event)" [nzIndeterminate]="indeterminate"></label>
+</div>
+<div>
+    <label nz-checkbox [(ngModel)]="dic['123']"></label>
+    <label nz-checkbox [(ngModel)]="dic['456']"></label>
+</div>
+<div>
+    {{checked}}
+</div>
+<div>
+    {{dic['123']}}
+</div>
+<div>
+    {{dic['456']}}
+</div>

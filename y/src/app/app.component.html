@@ -1,1 +1,25 @@
-<app-exercise></app-exercise>
+<nz-layout class="full-screen">
+    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzWidth]="160">
+      <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
+        <li nz-submenu>
+          <span title><i nz-icon nzType="user"></i><span class="nav-text">练习</span></span>
+          <ul>
+            <li nz-menu-item>
+                <a routerLink="/router1">页面1</a>
+            </li>
+            <li nz-menu-item>
+                <a routerLink="/router2">页面2</a>
+            </li> 
+            <li nz-menu-item>
+              <a routerLink="/router3">页面3</a>
+          </li> 
+          </ul>
+      </ul>
+    </nz-sider>
+    <nz-layout>
+        <router-outlet></router-outlet>
+    </nz-layout>
+</nz-layout>
+  
+
+

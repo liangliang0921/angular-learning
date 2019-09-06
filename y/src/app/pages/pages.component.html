@@ -1,0 +1,24 @@
+<p>pages works!</p>
+
+<div *ngIf="!isShow">
+    <button nz-button (click)="test()">展示数据</button>
+</div>
+<div *ngIf="isShow">
+    <button nz-button disabled>展示数据</button>
+</div>
+<span>
+    <button nz-button (click)="test2()">删除</button> 
+</span>
+<div *ngIf="isShow">
+    <div *ngFor="let data of data">
+        {{data.title}}
+    </div>
+</div>
+<div *ngIf="isShowAlert">
+    <nz-alert
+      nzType="warning"
+      nzMessage="审核超时"
+      nzDescription="当前审核任务已被打回，请重新获取新审核任务！"
+      nzCloseText="关闭">
+    </nz-alert>
+</div>
